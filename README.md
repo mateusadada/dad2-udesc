@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository and README are under development
+
 <h1 align="center">Data Structure 2 - UDESC</h1>
 <div align="center"><i>A complete list of solved exercises</i><br><br>
 <a href="https://github.com/mateusadada/dad2-udesc/stargazers"><img src="https://img.shields.io/github/stars/mateusadada/dad2-udesc" alt="Stars Badge"/></a>
