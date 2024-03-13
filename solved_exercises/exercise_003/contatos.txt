@@ -1,5 +1,0 @@
-Nome:;Celular:
-Guilherme;(41) 9 9123-4567
-Rafaela;(47) 9 92002-2222
-Eduardo;(48) 9 9876-5432
-Mercado;(47) 3003-1010
