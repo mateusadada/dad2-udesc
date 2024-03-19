@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> This repository and README are under development
+> This repository and README are under development.
 
 <h1 align="center">Data Structure 2 - UDESC</h1>
 <div align="center"><i>A complete list of solved exercises</i><br><br>
