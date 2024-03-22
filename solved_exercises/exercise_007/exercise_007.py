@@ -1,5 +1,4 @@
-# Inclua um método no programa anterior que permita 
-# inserir um novo registro com CODIGO, PLACA e 
+# Inclua um método no programa anterior que permita inserir um novo registro com CODIGO, PLACA e
 # ANO no final do arquivo VEICULOS.TXT
 
 import os

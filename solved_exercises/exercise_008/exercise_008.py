@@ -1,7 +1,5 @@
-# Inclua um método no programa anterior que solicite
-# o código do veículo e permita alterar os atributos do 
-# campo PLACA e ANO no arquivo VEICULOS.TXT. 
-# Utilize a busca sequencial p/ localizar o código
+# Inclua um método no programa anterior que solicite o código do veículo e permita alterar os atributos do
+# campo PLACA e ANO no arquivo VEICULOS.TXT. Utilize a busca sequencial p/ localizar o código.
 
 import os
 

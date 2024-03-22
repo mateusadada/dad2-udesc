@@ -1,5 +1,4 @@
-# Utilizando o mesmo arquivo (string) do exercício 1, faça um 
-# método que mostre na tela os registros da seguinte forma:
+# Utilizando o mesmo arquivo (string) do exercício 1, faça um método que mostre na tela os registros da seguinte forma:
 # Exemplo: 021.478.345-23 14/02/1984
 
 def formatar_registro(registro):

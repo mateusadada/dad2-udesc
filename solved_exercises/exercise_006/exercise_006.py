@@ -1,6 +1,6 @@
-# Implemente um programa que leia e mostre na tela
-# todos os registros do arquivo VEICULOS.TXT, na 
+# Implemente um programa que leia e mostre na tela todos os registros do arquivo VEICULOS.TXT, na 
 # seguinte ordem: CÓDIGO, PLACA e ANO
+
 # 001MFL14292003
 # 002ALO89232005
 # 003LXM68211997

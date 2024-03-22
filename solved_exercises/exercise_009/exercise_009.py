@@ -1,7 +1,5 @@
-# Inclua um novo método no programa anterior que 
-# exclua um registro com um determinado código (por 
-# exemplo, CODIGO = 004). Utilize a busca binária p/ 
-# localizar o código do registro a ser excluído
+# Inclua um novo método no programa anterior que exclua um registro com um determinado código
+# (por exemplo, CODIGO = 004). Utilize a busca binária p/ localizar o código do registro a ser excluído.
 
 import os
 

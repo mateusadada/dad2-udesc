@@ -1,5 +1,4 @@
-# Criar um programa que carregue um arquivo chamado 
-# “contatos.txt”, contendo nomes e números de contatos tal 
+# Criar um programa que carregue um arquivo chamado “contatos.txt”, contendo nomes e números de contatos tal
 # como os dados a seguir:
 
 # Nome:Celular

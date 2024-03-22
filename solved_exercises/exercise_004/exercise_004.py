@@ -1,12 +1,9 @@
-# Criar um novo arquivo chamado “frases.txt” com a seguintes 
-# frases: “Estudando Python.”, “Programando em Python.” e
+# Criar um novo arquivo chamado “frases.txt” com a seguintes frases: “Estudando Python.”, “Programando em Python.” e
 # “Manipulação de arquivos.” 
 
-# Criar um programa que retorne somente as linhas que 
-# possuem a palavra Python
+# Criar um programa que retorne somente as linhas que possuem a palavra Python.
 
-# Desenvolver um método que retorne somente as linhas que 
-# contém uma palavra específica a critério do usuário
+# Desenvolver um método que retorne somente as linhas que contém uma palavra específica a critério do usuário.
 
 import os
 
