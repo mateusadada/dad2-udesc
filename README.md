@@ -47,6 +47,9 @@ You need to have the Python language on your machine along with an IDE (Integrat
 
 ## 🛠️ Built with
 
+> [!NOTE]
+> In development
+
 * [Python 3](https://www.python.org/) - The programming language used.
 
 ## ✒️ Authors
