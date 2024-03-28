@@ -11,6 +11,8 @@ Santa Catarina; Rio de Janeiro; São Paulo; Parana; e Rio Grande do Sul
     - Verifique se esta inserção é aceita e se todos os pares são apresentados com o método values()
 */
 
+package exercise_014;
+
 import java.util.HashMap;
 import java.util.Map;
 
