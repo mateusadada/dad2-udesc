@@ -3,7 +3,9 @@
 # FDUSFPFACNMENMDSUROSDOME
 # VFNINATNSNGVGFRV
 
-# Resposta com espaços: lagrimas nao sao argumentos machado de assis
+# Resposta com espaços e acentuação: "LÁGRIMAS NÃO SÃO ARGUMENTOS MACHADO DE ASSIS"
+
+# Feito via códigos adaptados da internet e também com uma prova real no Excel.
 
 from playfair import Playfair
 
