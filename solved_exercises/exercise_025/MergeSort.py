@@ -1,65 +1,60 @@
-# Modifique para:
-
-# - Ordenar uma sequência de 3.000, 10.000 e 50.000 elementos de valores variando entre 0 e 100.000
-# - Utilize um contador (timer) para mostrar o tempo gasto (médio) na ordenação de cada uma das sequências acima, para cada algoritmo.
-
 import random
+import time
 
-def merge_sort(array):
-    """
-    Recursively divides the array, sorts the subarrays, and merges them back together.
-    """
-    if len(array) > 1:
-        middle1 = len(array) // 2
-        middle2 = middle1 + 1
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
 
-        # Divide the array in half and recursively sort each half
-        left_half = array[:middle1]
-        right_half = array[middle2:]
-        merge_sort(left_half)
-        merge_sort(right_half)
+        merge_sort(L)
+        merge_sort(R)
 
-        # Merge the sorted halves back into the original array
-        merge(array, left_half, right_half)
+        i = j = k = 0
 
-def merge(array, left_half, right_half):
-    """
-    Merges two sorted subarrays back into the original array.
-    """
-    left_index = 0
-    right_index = 0
-    combined_index = 0
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
 
-    while left_index < len(left_half) and right_index < len(right_half):
-        if left_half[left_index] <= right_half[right_index]:
-            array[combined_index] = left_half[left_index]
-            left_index += 1
-        else:
-            array[combined_index] = right_half[right_index]
-            right_index += 1
-        combined_index += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
 
-    # Copy any remaining elements from the left or right half
-    while left_index < len(left_half):
-        array[combined_index] = left_half[left_index]
-        left_index += 1
-        combined_index += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
 
-    while right_index < len(right_half):
-        array[combined_index] = right_half[right_index]
-        right_index += 1
-        combined_index += 1
+quantidade_elementos = (30, 10000, 50000)
+tempo_armazenado = []
 
-# Generate an unsorted array of 100 elements
-vector = [round((i + 1) * random.random() * 1000) for i in range(100)]
+for worth in quantidade_elementos:
+    # Gera um array não ordenado de `worth` elementos
+    vetor = [round((random.random() * 100000)) for _ in range(worth)]
+    
+    # Print the unsorted array
+    print(f"\n------------ unsorted array de {worth} elementos -----------")
+    print(", ".join(map(str, vetor)))
 
-# Print the unsorted array
-print("------------ Unsorted Vector -----------")
-print(",".join(map(str, vector)))
+    # Início do tempo gasto
+    inicial = time.time()
+    
+    merge_sort(vetor)
+    
+    # Final do tempo gasto
+    final = time.time()
+    tempo_gasto = final - inicial
+    tempo_armazenado.append(tempo_gasto)
 
-# Sort the array using merge sort
-merge_sort(vector)
+    # Mostra o array ordenado
+    print(f"\n----------- sorted vetor de {worth} elementos --------------")
+    print(", ".join(map(str, vetor)))
 
-# Print the sorted array
-print("\n----------- Sorted Vector --------------")
-print(",".join(map(str, vector)))
+for index, worth2 in enumerate(tempo_armazenado):
+    print(f'\n\033[33m{quantidade_elementos[index]} elementos\033[m com tempo gasto de \033[33m{worth2} segundos\033[m')

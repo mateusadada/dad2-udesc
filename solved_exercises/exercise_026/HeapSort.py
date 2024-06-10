@@ -2,6 +2,7 @@
 # e mostrar o tempo médio gasto com a ordenação.
 
 import random
+import time
 
 def heapify(arr, n, i):
     largest = i
@@ -30,16 +31,25 @@ def heap_sort(arr):
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
 
-if __name__ == "__main__":
-    # Gera um array não ordenado de 100 elementos
-    vector = [round(random.random() * 1000) for i in range(100)]
+# Gera um array não ordenado de 1000000 elementos
+vetor = [round((random.random() * 2000000)) for i in range(1000000)]
 
-    # Imprime o array não ordenado
-    print("------------ unsorted vector -----------")
-    print(",".join(map(str, vector)))
+# Print the unsorted array
+print("\n------------ unsorted array de 1000000 elementos -----------")
+print(", ".join(map(str, vetor)))
 
-    heap_sort(vector)
+# Início do tempo gasto
+inicial = time.time()
 
-    # Imprime o array ordenado
-    print("\n----------- sorted vector --------------")
-    print(",".join(map(str, vector)))
+# Ordena o array usando shell sort
+heap_sort(vetor)
+
+# Final do tempo gasto
+final = time.time()
+tempo_gasto = final - inicial
+
+# Mostra o array ordenado
+print("\n----------- sorted vetor de 1000000 elementos --------------")
+print(", ".join(map(str, vetor)))
+
+print(f'\n\033[33m1000000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')
