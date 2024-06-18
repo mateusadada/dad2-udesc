@@ -2,41 +2,62 @@
 # Ordenar uma sequência de 10.000.000 (dez milhões) de elementos variando entre 0 e 20.000.000 (20 milhões).
 # Utilize um contador (timer) para mostrar o tempo gasto na ordenação com cada algoritmo.
 
-# algoritmo insertion sort para ordenação de recipientes individuais
+import time
+import random
+
+# ordena cada bucket individualmente com o insertion sort
 def insertion_sort(bucket):
-    for i in range(1, len(bucket)):
-        key = bucket[i]
+    for i in range (1, len (bucket)):
+        var = bucket[i]
         j = i - 1
-        while j >= 0 and bucket[j] > key:
+        while (j >= 0 and var < bucket[j]):
             bucket[j + 1] = bucket[j]
-            j -= 1
-        bucket[j + 1] = key
+            j = j - 1
+        bucket[j + 1] = var
 
-def bucket_sort(arr):
-    n = len(arr)
-    buckets = [[] for _ in range(n)] # cria uma lista de listas de tamanho n
+def bucket_sort(input_list):
+    # Encontrar o valor máximo na lista e usar o comprimento da lista para determinar qual valor da lista vai para qual intervalo
+    max_value = max(input_list)
+    size = max_value/len(input_list)
 
-    # coloca cada elemento em um recipiente diferente conforme o valor de bi
-    for num in arr:
-        bi = int(n * num)
-        buckets[bi].append(num)
+    # Criar n buckets vazios onde n é igual ao comprimento da lista de entrada
+    buckets_list= []
+    for x in range(len(input_list)):
+        buckets_list.append([])
 
-    # ordena cada recipiente utilizando o insertion sort
-    for bucket in buckets:
-        insertion_sort(bucket)
+    # Colocar os elementos da lista em grupos diferentes com base no tamanho (size)
+    for i in range(len(input_list)):
+        j = int (input_list[i] / size)
+        if j != len (input_list):
+            buckets_list[j].append(input_list[i])
+        else:
+            buckets_list[len(input_list) - 1].append(input_list[i])
 
-    # concatna todos os recipientes novamente no array
-    index = 0
-    for bucket in buckets:
-        for num in bucket:
-            arr[index] = num
-            index += 1
+    # Ordenar os elementos dentro dos buckets usando o insertion sort
+    for z in range(len(input_list)):
+        insertion_sort(buckets_list[z])
 
-# funciona para ordenar elementos num intervalo 0..1
-arr = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
-#OldRange = (OldMax - OldMin) # OldRange = (9999999999 - 0)
-#NewRange = (NewMax - NewMin)
-#NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin
-bucket_sort(arr)
-print("Sorted array is:")
-print(" ".join(map(str, arr)))
+    # Concatenar os buckets individualmente ordenados em uma única lista
+    final_output = []
+    for x in range(len (input_list)):
+        final_output = final_output + buckets_list[x]
+    return final_output
+
+#input_list = [1.20, 0.22, 0.43, 0.36, 0.39, 0.27]
+input_list = [round((random.random() * 20000000)) for i in range(10000000)] # Aqui ocorre falha no bucket e apenas insertion sort faz a ordenação
+print('ORIGINAL LIST:')
+print(input_list)
+
+# Início do tempo gasto
+inicial = time.time()
+
+sorted_list = bucket_sort(input_list)
+
+# Final do tempo gasto
+final = time.time()
+tempo_gasto = final - inicial
+
+print('\nSORTED LIST:')
+print(sorted_list)
+
+print(f'\n\033[33m10.000.000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')

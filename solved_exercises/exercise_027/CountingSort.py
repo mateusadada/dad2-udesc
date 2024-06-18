@@ -2,6 +2,9 @@
 # Ordenar uma sequência de 10.000.000 (dez milhões) de elementos variando entre 0 e 20.000.000 (20 milhões).
 # Utilize um contador (timer) para mostrar o tempo gasto na ordenação com cada algoritmo.
 
+import time
+import random
+
 def count_sort(input_array):
 	# Finding the maximum element of input_array.
 	M = max(input_array)
@@ -29,10 +32,19 @@ def count_sort(input_array):
 # Driver code
 if __name__ == "__main__":
 	# Input array
-	input_array = [4, 3, 12, 1, 5, 5, 3, 9]
+	input_array = [round((random.random() * 20000000)) for i in range(10000000)]
+
+	# Início do tempo gasto
+	inicial = time.time()
 
 	# Output array
 	output_array = count_sort(input_array)
 
+	# Final do tempo gasto
+	final = time.time()
+	tempo_gasto = final - inicial
+
 	for num in output_array:
 		print(num, end=" ")
+
+	print(f'\n\033[33m10.000.000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')

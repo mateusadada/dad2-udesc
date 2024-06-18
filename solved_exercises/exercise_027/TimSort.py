@@ -2,9 +2,11 @@
 # Ordenar uma sequência de 10.000.000 (dez milhões) de elementos variando entre 0 e 20.000.000 (20 milhões).
 # Utilize um contador (timer) para mostrar o tempo gasto na ordenação com cada algoritmo.
 
+import time
+import random
+
 # Python3 program to perform basic timSort 
 MIN_MERGE = 32
-
 
 def calcMinRun(n): 
 	"""Returns the minimum length of a 
@@ -110,14 +112,22 @@ def timSort(arr):
 # Driver program to test above function 
 if __name__ == "__main__": 
 
-	arr = [-2, 7, 15, -14, 0, 15, 0, 
-		7, -7, -4, -13, 5, 8, -14, 12] 
+	arr = [round((random.random() * 20000000)) for i in range(10000000)]
 
 	print("Given Array is") 
 	print(arr) 
 
-	# Function Call 
-	timSort(arr) 
+	# Início do tempo gasto
+	inicial = time.time()
 
-	print("After Sorting Array is") 
-	print(arr) 
+	# Function Call 
+	timSort(arr)
+
+	# Final do tempo gasto
+	final = time.time()
+	tempo_gasto = final - inicial
+
+	print("\nAfter Sorting Array is") 
+	print(arr)
+
+	print(f'\n\033[33m10.000.000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')

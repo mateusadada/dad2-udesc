@@ -2,6 +2,9 @@
 # Ordenar uma sequência de 10.000.000 (dez milhões) de elementos variando entre 0 e 20.000.000 (20 milhões).
 # Utilize um contador (timer) para mostrar o tempo gasto na ordenação com cada algoritmo.
 
+import time
+import random
+
 # Python program for implementation of Radix Sort
 # A function to do counting sort of arr[] according to
 # the digit represented by exp.
@@ -58,13 +61,19 @@ def radixSort(arr):
 
 
 # Driver code
-arr = [170, 45, 75, 90, 802, 24, 2, 66]
+arr = [round((random.random() * 20000000)) for i in range(10000000)]
+
+# Início do tempo gasto
+inicial = time.time()
 
 # Function Call
 radixSort(arr)
 
+# Final do tempo gasto
+final = time.time()
+tempo_gasto = final - inicial
+
 for i in range(len(arr)):
     print(arr[i], end=" ")
 
-# This code is contributed by Mohit Kumra
-# Edited by Patrick Gallagher
+print(f'\n\033[33m10.000.000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')
