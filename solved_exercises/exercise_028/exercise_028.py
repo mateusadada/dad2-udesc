@@ -5,16 +5,13 @@ import random
 
 lista = [round((random.random() * 20000000)) for i in range(10000000)]
 
-# Início do tempo gasto
 inicial = time.time()
 
 lista.sort()
 
-# Impressão da lista ordenada
 print('Lista ordenada')
 print(lista)
 
-# Final do tempo gasto
 final = time.time()
 tempo_gasto = final - inicial
 
