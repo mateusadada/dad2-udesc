@@ -5,7 +5,6 @@
 import time
 import random
 
-# Python3 program to perform basic timSort 
 MIN_MERGE = 32
 
 def calcMinRun(n): 
@@ -114,20 +113,17 @@ if __name__ == "__main__":
 
 	arr = [round((random.random() * 20000000)) for i in range(10000000)]
 
-	print("Given Array is") 
+	print("Given Array is")
 	print(arr) 
 
-	# Início do tempo gasto
 	inicial = time.time()
 
-	# Function Call 
 	timSort(arr)
 
-	# Final do tempo gasto
 	final = time.time()
 	tempo_gasto = final - inicial
 
-	print("\nAfter Sorting Array is") 
+	print("\nAfter Sorting Array is")
 	print(arr)
 
 	print(f'\n\033[33m10.000.000 elementos\033[m com tempo gasto de \033[33m{tempo_gasto} segundos\033[m')
