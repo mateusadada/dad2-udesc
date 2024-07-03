@@ -43,9 +43,6 @@ def countingSort(arr, exp1):
     for i in range(0, len(arr)):
         arr[i] = output[i]
 
-# Method to do Radix Sort
-
-
 def radixSort(arr):
 
     # Find the maximum number to know number of digits
@@ -63,13 +60,11 @@ def radixSort(arr):
 # Driver code
 arr = [round((random.random() * 20000000)) for i in range(10000000)]
 
-# Início do tempo gasto
 inicial = time.time()
 
 # Function Call
 radixSort(arr)
 
-# Final do tempo gasto
 final = time.time()
 tempo_gasto = final - inicial
 
