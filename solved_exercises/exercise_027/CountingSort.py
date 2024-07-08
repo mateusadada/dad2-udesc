@@ -34,13 +34,11 @@ if __name__ == "__main__":
 	# Input array
 	input_array = [round((random.random() * 20000000)) for i in range(10000000)]
 
-	# Início do tempo gasto
 	inicial = time.time()
 
 	# Output array
 	output_array = count_sort(input_array)
 
-	# Final do tempo gasto
 	final = time.time()
 	tempo_gasto = final - inicial
 
