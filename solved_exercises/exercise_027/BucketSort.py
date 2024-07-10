@@ -48,12 +48,10 @@ input_list = [round((random.random() * 20000000)) for i in range(10000000)] # Aq
 print('ORIGINAL LIST:')
 print(input_list)
 
-# Início do tempo gasto
 inicial = time.time()
 
 sorted_list = bucket_sort(input_list)
 
-# Final do tempo gasto
 final = time.time()
 tempo_gasto = final - inicial
 
