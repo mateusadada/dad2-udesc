@@ -38,13 +38,11 @@ vetor = [round((random.random() * 2000000)) for i in range(1000000)]
 print("\n------------ unsorted array de 1000000 elementos -----------")
 print(", ".join(map(str, vetor)))
 
-# Início do tempo gasto
 inicial = time.time()
 
 # Ordena o array usando shell sort
 heap_sort(vetor)
 
-# Final do tempo gasto
 final = time.time()
 tempo_gasto = final - inicial
 
