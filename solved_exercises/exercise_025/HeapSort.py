@@ -44,12 +44,10 @@ for worth in quantidade_elementos:
     print(f"\n------------ unsorted array de {worth} elementos -----------")
     print(", ".join(map(str, vetor)))
 
-    # Início do tempo gasto
     inicial = time.time()
     
     heap_sort(vetor)
     
-    # Final do tempo gasto
     final = time.time()
     tempo_gasto = final - inicial
     tempo_armazenado.append(tempo_gasto)
