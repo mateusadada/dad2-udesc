@@ -17,7 +17,6 @@ def BubbleSort(lista_quantidade_elementos):
         print(f"\n----------- vetor desordenado de {worth} elementos -----------")
         print(", ".join(map(str, vetor)))
 
-        # Início do tempo gasto
         inicial = time.time()
 
         # Ordena o array usando bubble sort
@@ -30,7 +29,6 @@ def BubbleSort(lista_quantidade_elementos):
                     t = 1
                     vetor[i], vetor[i+1] = vetor[i+1], vetor[i]
 
-        # Final do tempo gasto
         final = time.time()
         tempo_gasto = final - inicial
         tempo_armazenado.append(tempo_gasto)
