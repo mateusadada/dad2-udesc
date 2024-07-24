@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> This repository and README are under development.
-
 <h1 align="center">Data Structure 2 - UDESC</h1>
 <div align="center"><i>A complete list of solved exercises</i><br><br>
 <a href="https://github.com/mateusadada/dad2-udesc/stargazers"><img src="https://img.shields.io/github/stars/mateusadada/dad2-udesc" alt="Stars Badge"/></a>
@@ -23,17 +20,18 @@
 - [License](#-license)
 
 ## 🚀 Starting
-> [!NOTE]
-> In development
 
 This repository contains the solved exercises from Data Structure 2 course in the fourth semester.
 
+The exercises performed varied in complexity and involved different encryption and search algorithms. These exercises were crucial in understanding the structure of the Python programming language, as well as exploring new ways of thinking
+
 ## 📚 Features
 
-> [!NOTE]
-> In development
-
 Used during the evolution of exercises and the final project:
+
+- Search algorithms.
+- Cryptography.
+- Text file manipulation.
 
 ## 📋 Prerequisites
 
@@ -47,10 +45,8 @@ You need to have the Python language on your machine along with an IDE (Integrat
 
 ## 🛠️ Built with
 
-> [!NOTE]
-> In development
-
-* [Python 3](https://www.python.org/) - The programming language used.
+* [Python 3](https://www.python.org/) - The main programming language.
+* [Java](https://www.java.com/) - The second programming language.
 
 ## ✒️ Authors
 
