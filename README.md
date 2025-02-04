@@ -23,7 +23,7 @@
 
 This repository contains the solved exercises from Data Structure 2 course in the fourth semester.
 
-The exercises performed varied in complexity and involved different encryption and search algorithms. These exercises were crucial in understanding the structure of the Python programming language, as well as exploring new ways of thinking
+The exercises performed varied in complexity and involved different encryption and search algorithms. These exercises were crucial in understanding the structure of the Python programming language, as well as exploring new ways of thinking.
 
 ## 📚 Features
 
